@@ -1,48 +1,128 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-    <meta charset = 'UTF-8'>
+    <meta charset='UTF-8'>
     <title>Rate Us</title>
     <style>
-        .header {
-            overflow: hidden;
-            background-color: #f1f1f1;
-            padding: 20px 10px;
+        body {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto 100vh auto;
+            grid-template-areas:
+                "header header header"
+                "main main aside"
+                "footer footer footer";
+            background: #999;
         }
-        .header a {
-            float: left;
-            color: black;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 25px;
-            border-radius: 4px;
+        header {
+            grid-area: header;
+            border-radius: 5px;
+            background: whitesmoke;
         }
-        .header a.logo {
-            font-size: 25px;
+        header nav {
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 1.5em 0;
+        }
+        header nav a {
+            background: chocolate;
+        }
+        header nav div {
+            background: orange;
+        }
+        header div a {
+            background: green;
+        }
+        header ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        header nav ul li {
+            display: inline-flex;
+        }
+        header nav ul li a {}
+
+        main {
+            grid-area: main;
+            border-radius: 5px;
+            background: pink;
+        }
+        aside {
+            grid-area: aside;
+            border-radius: 5px;
+            background: #d9d9d9;
+        }
+
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
             font-weight: bold;
         }
-        .header a.active {
-            background-color: gray;
-            color: white;
-        }
-        .header-right {
-            float: left;
+
+        footer {
+            grid-area: footer;
+            border-radius: 5px;
+            background: violet;
         }
     </style>
 </head>
+
 <body>
-    <div class = "header">
-        <a href = "#default" class = "logo">RateUs</a>
-        <div class = "header-right">
-            <a class = "active" href = "#home">Início</a>
-            <a href = "#contribute">Contribua</a>
-            <a href = "#best">Melhores Pratos</a>
-            <a href = "#login">Login</a>
-            <a href = "#signin">Criar Conta</a>
-        </div>
-    </div>
+
+    <header>
+
+        <nav>
+
+            <a href="#default" class="logo">RateUs</a>
+
+            <ul>
+                <li><a class="active" href="#home">Início</a></li>
+                <li><a href="#contribute">Contribua</a></li>
+                <li><a href="#best">Melhores Pratos</a></li>
+
+            </ul>
+
+            <div>
+                <a href="#login">Login</a>
+                <a href="#signin">Criar Conta</a>
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <aside>
+        <center>
+            <h1>Últimas Submissões:</h1>
+            <br><h2>Ambrósio</h2>
+            <h3>01/01/2019</h3>
+            <p style="font-size: 20px">Péssima carne, tive complicações intestinais após comer.</p><br>
+            <br><br><h2>Ambrosina</h2>
+            <h3>01/01/2019</h3>
+            <img src = "img/lasanha_a_bolonhesa.jpg" width="400" height="280" alt = "algo">
+            <p style="font-size: 20px">Isso é carne de frango mesmo ?</p>
+
+        </center>
+    </aside>
+
+    <main>
+        Principal
+    </main>
+
+    <footer>
+        Rodapé
+    </footer>
+
+</body>
 
 </html>
