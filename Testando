@@ -9,12 +9,12 @@
         body {
             display: grid;
             grid-gap: 1rem;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto 100vh auto;
+            grid-template-columns: 150vh auto;
+            grid-template-rows: auto auto auto;
             grid-template-areas:
-                "header header header"
-                "main main aside"
-                "footer footer footer";
+                "header header"
+                "main aside"
+                "footer footer";
             background: #999;
         }
         header {
@@ -52,21 +52,41 @@
             border-radius: 5px;
             background: pink;
         }
+
         aside {
+            display: flex;
             grid-area: aside;
-            border-radius: 5px;
-            background: #d9d9d9;
         }
 
-        h1 {
-            display: block;
-            font-size: 2em;
-            margin-top: 0.67em;
-            margin-bottom: 0.67em;
-            margin-left: 0;
-            margin-right: 0;
-            font-weight: bold;
+        #sidebar {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-gap: 0.6rem;
+            grid-template-areas:"latest"
+                                "ambrosio"
+                                "ambrosina";
         }
+
+        #late {
+            grid-area: latest;
+            padding: 20px;
+            background: #d9d9d9;
+            border-radius: 5px;
+        }
+
+        #ambrosio {
+            grid-area: ambrosio;
+            background: #d9d9d9;
+            border-radius: 5px;
+        }
+
+        #ambrosina {
+            grid-area: ambrosina;
+            background: #d9d9d9;
+            border-radius: 5px;
+        }
+
 
         footer {
             grid-area: footer;
@@ -103,15 +123,22 @@
 
     <aside>
         <center>
-            <h1>Últimas Submissões:</h1>
-            <br><h2>Ambrósio</h2>
-            <h3>01/01/2019</h3>
-            <p style="font-size: 20px">Péssima carne, tive complicações intestinais após comer.</p><br>
-            <br><br><h2>Ambrosina</h2>
-            <h3>01/01/2019</h3>
-            <img src = "img/lasanha_a_bolonhesa.jpg" width="400" height="280" alt = "algo">
-            <p style="font-size: 20px">Isso é carne de frango mesmo ?</p>
-
+            <div id = "sidebar">
+                <div id = "late">
+                    <h1>Últimas Submissões:</h1>
+                </div>
+                <div id = "ambrosio">
+                    <br><h2>Ambrósio</h2>
+                    <h3>01/01/2019</h3>
+                    <p style="font-size: 20px">Péssima carne, tive complicações intestinais após comer.</p><br>
+                </div>
+                <div id = "ambrosina">
+                    <br><br><h2>Ambrosina</h2>
+                    <h3>01/01/2019</h3>
+                    <img src = "img/lasanha_a_bolonhesa.jpg" width="380" height="250" alt = "algo">
+                    <p style="font-size: 20px">Isso é carne de frango mesmo ?</p>
+                </div>
+            </div>
         </center>
     </aside>
 
