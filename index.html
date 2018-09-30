@@ -5,127 +5,84 @@
 <head>
     <meta charset='UTF-8'>
     <title>Rate Us</title>
-    <style>
-        body {
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:400,600|Ubuntu+Mono:400,700  " rel="stylesheet">
+    <link rel="stylesheet" href="src/css/animate.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/js/scripts.js"></script>
 
-            display: grid;
-            grid-gap: 1rem;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto 100vh auto;
-            grid-template-areas:
-                "header header header"
-                "main main aside"
-                "footer footer footer";
-
-            background: #999;
-
-        }
-
-        header {
-
-            grid-area: header;
-            background: whitesmoke;
-            border-bottom: 2px solid red;
-
-        }
-
-        header nav {
-
-            display: flex;
-            flex-flow: row nowrap;
-            padding: 1.5em 0;
-
-        }
-
-        header nav a {
-
-            background: chocolate;
-
-        }
-
-        header nav div {
-
-            background: orange;
-
-        }
-
-        header div a {
-
-            background: green;
-        }
-
-        header ul {
-
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-        }
-
-        header nav ul li {
-
-            display: inline-flex;
-        }
-
-        header nav ul li a {}
-
-        main {
-
-            grid-area: main;
-            background: pink;
-        }
-
-        aside {
-
-            grid-area: aside;
-            background: blue;
-        }
-
-        footer {
-
-            grid-area: footer;
-            background: violet;
-        }
-
-    </style>
 </head>
 
 <body>
 
     <header>
 
-        <nav>
+        <div id="h-content">
 
-            <a href="#default" class="logo">RateUs</a>
-
-            <ul>
-                <li><a class="active" href="#home">Início</a></li>
-                <li><a href="#contribute">Contribua</a></li>
-                <li><a href="#best">Melhores Pratos</a></li>
-
-            </ul>
-
-            <div>
-                <a href="#login">Login</a>
-                <a href="#signin">Criar Conta</a>
+            <div id="nav-btn">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
+            <div id="logo">
+                <img src="src/img/alura-logo.1538062993.svg">
+            </div>
+
+            <div class="btns">
+                <a href="#login" class="btn btn-main">Participe</a>
+            </div>
+
+        </div>
+
+        <nav id="h-nav">
+
+            <div id="login">
+
+                <div id="img-login">
+                    <img src="src/img/user.svg">
+                </div>
+                <div id="title-login">
+                    <p><b>Vitor Barcelos</b></p>
+                    <p>C. Computação</p>
+                </div>
+                <div class="btns">
+                    <a href="#login" class="btn btn-login">Login</a>
+                    <a href="#login" class="btn btn-login">Sig in</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Best Pratos</a></li>
+                <li><a href="">Mensagens</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Ajuda</a></li>
+                <li><a href="">Quem somos</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Best Pratos</a></li>
+                <li><a href="">Mensagens</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Ajuda</a></li>
+                <li><a href="">Quem somos</a></li>
+            </ul>
         </nav>
 
     </header>
 
-    <aside>
-        Barra Lateral
-    </aside>
+    <section id="content">
+        <aside>
+            Barra Lateral
+        </aside>
 
-    <main>
-        Principal
-    </main>
+        <main>
+            Principal
+        </main>
 
-    <footer>
-        Rodapé
-    </footer>
-
+        <footer>
+            Rodapé
+        </footer>
+    </section>
 </body>
 
 </html>

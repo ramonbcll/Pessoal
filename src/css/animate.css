@@ -1,0 +1,26 @@
+@keyframes bounce {
+
+    0%,
+    20%,
+    60%,
+    100% {
+
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+
+    }
+
+    40% {
+
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+
+    }
+
+    80% {
+
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
+
+    }
+}
